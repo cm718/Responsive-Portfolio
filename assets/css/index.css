@@ -1,0 +1,234 @@
+
+/* Clearing out some of the default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* I gave my nav the flex property so that I would be able to easily center the .menu-container */
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+  font-family: 'Georgia', Times, Times New Roman, serif;
+}
+
+/* Then I gave the .menu-container the flex property to be able to send the .logo and .menu to the left and right sides of the page respectively. */
+.menu-container {
+  display: flex;
+  justify-content: space-between;
+  width: 960px;
+}
+
+/* I gave this the flex-start rule to make sure it stayed to the left */
+.logo {
+  flex: flex-start;
+}
+
+/* Filling out my h1 box a bit and setting the size for my h1 */
+nav h1 {
+  background-color: #4aaaa5;
+  padding: 20px 30px;
+  color: white;
+  font-size: 25px;
+}
+
+/* I gave this the flex-end rule to make sure all three links stayed to the right side of the page. I also gave it the display: flex; rule so that I could make sure to organize each link next. */
+.menu {
+  display: flex;
+  flex: flex-end;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Removed the text decoration for the a tag and changed the color to white. */
+h1 a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Removed the text decoration to clear the formatting and then added the color and font rules. */
+.menu a {
+  text-decoration: none;
+  color: #777;
+  font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+/* Bonus: I added a hover color and matched it to the rest of the page. */
+.menu a:hover {
+  color: #4aaaa5;
+}
+
+/* I gave the about and contact padding-right and then put a border line there so that it would have the vertical lines in place. */
+.about,
+.portfolio {
+  padding-right: 20px;
+  border-right: .3px solid #ddd;
+}
+
+/* Then I added padding to the left of contact and portfolio so that there was equal spacing on each side of the vertical lines. */
+.contact,
+.portfolio {
+  padding-left: 20px;
+}
+
+/* Giving the page a height and attaching my background image. */
+body {
+  height: 1200px;
+  background-image: url("../images/qbkls.png");
+}
+
+/* Making sure the main was still within the 960px specification. Centering it with margin: 0 auto;. I also gave it the display: flex; rule so that it's internal boxes would receive the flex property. */
+main {
+  width: 960px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  position: relative;
+  top: 50px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #dddddd;
+}
+
+/* Giving the styling to my h1 inside my main section. */
+main h1 {
+  color: #4aaaa5;
+  margin: 30px 0 20px 30px;
+  padding-bottom: 30px;
+  font-size: 25px;
+  font-family: 'Georgia', Times, Times New Roman, serif;
+  border-bottom: 2px solid #ddd;
+  max-width: 900px;
+}
+
+/* Styled to horizontal rule. */
+/* hr {
+  color: #ddd;
+  width: 900px;
+  margin-left: 30px;
+} */
+
+/* I put my img and p into a div and then gave the img the float: left; rule to make sure that it stayed in the top left corner and the paragraph wrapped around it correctly. */
+main img {
+  margin: 30px 30px 0 30px;
+  float: left;
+  position: relative;
+}
+
+/* Gave it a line-height of 2 so that it would match the assigned image. I also gave it a position: relative; rule so that it would wrap around the image. */
+main p {
+  line-height: 2;
+  margin: 18px 30px 10px 30px;
+  position: relative;
+  font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+  color: #777;
+}
+
+/* This was to make sure it had some space between the bottom of the paragraph and the rest of the white main area. */
+#p2 {
+  margin-bottom: 60px;
+}
+
+/* I needed to align the text and center it. To get it to stay the bottom of the page I gave it a bottom: 0; and position: fixed; rule. I also gave it a width of 100% to make sure it filled whatever screen size it was on. */
+footer {
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  background-color: #666666;
+  color: #CAC8C8;
+  border-top: 10px solid #4aaaa5;
+  padding: 25px 0 10px 0;
+  font-size: .85em;
+}
+
+@media only screen and (max-width: 980px) {
+  main {
+    width: 90%;
+  }
+
+  .about-section {
+    width: 90%;
+  }
+
+  .contact {
+    padding-right: 30px;
+  }
+
+  main h1 {
+    max-width: 90%;
+  }
+
+  p {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .about-section {
+    width: 90%;
+  }
+
+  .contact {
+    padding-right: 30px;
+  }
+
+  p {
+    width: 100%;
+  }
+
+}
+
+@media only screen and (max-width: 640px) {
+  .menu-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .menu{
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .logo {
+    text-align: center;
+  }
+
+  .about,
+  .contact,
+  .portfolio {
+    text-align: center;
+    padding: 15px 0;
+    border-right: 0px #fff;
+  }
+
+  .contact {
+    padding-right: 0;
+  }
+
+  main {
+    width: 100%;
+  }
+
+  main h1 {
+    width: 90%;
+    max-width: 580px;
+  }
+
+  .about-section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+
+  p {
+    width: 100%;
+  }
+
+}

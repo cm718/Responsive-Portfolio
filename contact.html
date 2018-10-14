@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact</title>
+  <link rel="stylesheet" href="assets/css/contact.css">
+</head>
+
+<body>
+<!-- Each nav and div are given the display: flex; rule so that I could manipulate the divs using flexbox rules. The nav holds the menu-container so that the whole menu-container (think navbar) could be centered more easily within the larger nav box. -->
+  <nav>
+    <div class='menu-container'>
+      <div class='logo'>
+        <h1><a href='index.html'>Chris McLaughlin</a></h1>
+      </div>
+      <div class='menu'>
+        <div class='about'><a href='index.html'>About</a></div>
+        <div class='portfolio'><a href='portfolio.html'>Portfolio</a></div>
+        <div class='contact'><a href='#'>Contact</a></div>
+      </div>
+    </div>
+  </nav>
+
+<!-- The main area holds the contact form. By putting the form inside the main tag it allows other developers to easily find the section, but maybe more importantly it is the div the gives the flex property to each of the boxes inside. -->
+  <main>
+    <h1>Contact</h1>
+    <div class="contact-box">
+      <h4>Name</h4>
+      <input type="text" placeholder="John Smith">
+      <h4>Email</h4>
+      <input type="email" placeholder="example@gmail.com">
+      <h4>Message</h4>
+      <textarea rows="15" cols="80"></textarea>
+      <button>Submit</button>
+    </div>
+  </main>
+
+  <footer>Copyright ©</footer>
+
+</body>
+
+</html>

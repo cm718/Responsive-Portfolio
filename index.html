@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About</title>
+  <link rel='stylesheet' href='assets/css/index.css'>
+</head>
+
+<body>
+ <!-- I built my nav and copied and pasted it into all three html documents so that it would be uniform across each page. Each nav and div are given the display: flex; rule so that I could manipulate the divs using flexbox rules. The nav holds the menu-container so that the whole menu-container (think navbar) could be centered more easily within the larger nav box. I continue this logic throughout. -->
+  <nav>
+    <div class='menu-container'>
+      <div class='logo'>
+        <h1><a href='index.html'>Chris McLaughlin</a></h1>
+      </div>
+      <div class='menu'>
+        <a href='index.html' class='about'>About</a>
+        <a href='portfolio.html' class='portfolio'>Portfolio</a>
+        <a href='contact.html' class='contact'>Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <h1>About</h1>
+
+    <!-- needed to make a div so that the float left on the img worked correctly with the p -->
+    <div class='about-section'>
+      <img src='assets/images/CM_small.jpg' alt='Chris McLaughlin' width='200px' height='200px'>
+      <p>My name is Chris and I am a Christian, husband, father, and pastor. I also work full time for Apple. I am now adding developer to the list. I decided to start learning to code a few months back at the recommendation of a friend from work. He had just begun this program and suggested I check out some online courses to see what I thought of it. </p>
+      <p>I started learning HTML, CSS, and Javascript. I really enjoyed the challenge and sense of success when things worked. As the months went by I found myself really loving the learning process. My wife and I began to discuss the possibility of a career change. I was learning more about web development as well as the wonderful job market that exists for developers.</p>
+      <!-- Needed to give the third p an id to select it specifically so that I could give it some extra margin at the bottom -->
+      <p id='p2'>I decided that when the next boot camp opened up I would apply and here I am today. I look forward to refining what I already know as well as building on my current skills, specifically with Javascript and back end development.</p>
+    </div>
+
+  </main>
+
+  <footer>Copyright ©</footer>
+
+</body>
+
+</html>
